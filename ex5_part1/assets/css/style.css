@@ -7,5 +7,4 @@
 .form{
     display: flex;
     flex-direction: column;
-    margin-right: 100px;
 }

@@ -1,17 +1,15 @@
-var firstParagraph = document.getElementById('firstParagraph');
-//commentaire
-console.log()
+// Créer une variable pour le boutton en ciblant l'id du boutton
+var button = document.getElementById('button')
 
-var age = 15;
+// Créer un événement au clic du boutton par :[id du boutton].[addEventListener]('clic', function [donner un id à la fonction])
+button.addEventListener('click',function getValue() {
+  // Sélectionner le texte de chaque champ complété et récupérer sa valeur avec .value
+  var input1 = document.getElementById('lastName').value;
+  var input2 = document.getElementById('firstName').value;
+  var input3 = document.getElementById('city').value;
 
-if(age > 18){// si ma variable age est stritement supérieure à 18,{} sinon {}
+  // Afficher la valeur totale en indiquant chaque input
+  alert('Nom : ' + input1 + '\nPrénom : ' + input2 + '\nVille : ' + input3);
+});
 
-} else {
-    
-}
 
-if(age >= 18){ //supérieur ou égal à 18
-    alert('vous êtes majeur')
-} else {
-  alert('vous êtes mineur')
-}

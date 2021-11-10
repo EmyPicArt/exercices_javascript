@@ -8,9 +8,15 @@
     <title>Javascript</title>
 </head>
 <body>
-    <p id="firstParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, velit!</p>
-    <p id="secondParagraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, aspernatur.</p>
-    <p id="thirdParagraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, aperiam.</p>
+    <form action="formulaire">
+        <fieldset class="form">
+            <label for="number1">Nombre de cookies préparés ?</label>
+            <input type="text" placeholder="Il y a :" id="cookies">
+            <label for="number2">Nombre d'invités ?</label>
+            <input type="text" placeholder="Nous sommes :" id="invited">
+            <button id="button" type="button">Nombre de cookies restants à se partager</button>
+        </fieldset>
+    </form>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

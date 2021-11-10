@@ -1,17 +1,9 @@
-var firstParagraph = document.getElementById('firstParagraph');
-//commentaire
-console.log()
+var button= document.getElementById('button')
 
-var age = 15;
+button.addEventListener('click', function getValue(){
+  var cookies = document.getElementById('cookies').value;
+  var invited = document.getElementById('invited').value;
+  alert('Il va falloir se battre il ne reste que :' + cookies % invited +' cookie(s) !!!');
+});
 
-if(age > 18){// si ma variable age est stritement supérieure à 18,{} sinon {}
 
-} else {
-    
-}
-
-if(age >= 18){ //supérieur ou égal à 18
-    alert('vous êtes majeur')
-} else {
-  alert('vous êtes mineur')
-}

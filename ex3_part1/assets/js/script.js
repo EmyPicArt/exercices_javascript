@@ -1,17 +1,4 @@
-var firstParagraph = document.getElementById('firstParagraph');
-//commentaire
-console.log()
-
-var age = 15;
-
-if(age > 18){// si ma variable age est stritement supérieure à 18,{} sinon {}
-
-} else {
-    
-}
-
-if(age >= 18){ //supérieur ou égal à 18
-    alert('vous êtes majeur')
-} else {
-  alert('vous êtes mineur')
-}
+//boite de dialogue prompt pour remplir le prénom
+var firstName = prompt('Prénom :', '');
+// créer une var correspondant au prompt pour pouvoir l'afficher dans l'alerte
+alert('Bonjour, ' + firstName)

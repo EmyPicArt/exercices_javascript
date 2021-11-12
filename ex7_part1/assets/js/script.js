@@ -1,17 +1,15 @@
-var firstParagraph = document.getElementById('firstParagraph');
 //commentaire
 console.log()
+var button = document.getElementById('button');
 
-var age = 15;
 
-if(age > 18){// si ma variable age est stritement supérieure à 18,{} sinon {}
-
-} else {
-    
+var recupValue = function(){
+  var age = document.getElementById('age').value;
+  if(age >= 18){ //supérieur ou égal à 18
+      alert('vous êtes majeur')
+  } else {
+    alert('vous êtes mineur')
+  }
 }
 
-if(age >= 18){ //supérieur ou égal à 18
-    alert('vous êtes majeur')
-} else {
-  alert('vous êtes mineur')
-}
+button.addEventListener('click', recupValue);

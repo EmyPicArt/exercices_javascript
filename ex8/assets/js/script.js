@@ -1,17 +1,8 @@
-var firstParagraph = document.getElementById('firstParagraph');
-//commentaire
-console.log()
+// Evenement lors du passage de la souris : addEventListener + mouseenter et quand la souris quitte : mouseout
+img1.addEventListener('mouseenter', function(){
+  var img1 = document.getElementById('img1').src="assets/img/cygne.jpg";
+});
+img1.addEventListener('mouseout', function(){
+  var img1 = document.getElementById('img1').src="assets/img/stitch.jpg";
+});
 
-var age = 15;
-
-if(age > 18){// si ma variable age est stritement supérieure à 18,{} sinon {}
-
-} else {
-    
-}
-
-if(age >= 18){ //supérieur ou égal à 18
-    alert('vous êtes majeur')
-} else {
-  alert('vous êtes mineur')
-}

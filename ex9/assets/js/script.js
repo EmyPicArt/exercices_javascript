@@ -1,17 +1,9 @@
-var firstParagraph = document.getElementById('firstParagraph');
-//commentaire
-console.log()
+// agrandir une image au clic 1) créer une var width/height = _.clientWidth/Height = 2) _.style.width/height = (width + nb + "px")
 
-var age = 15;
-
-if(age > 18){// si ma variable age est stritement supérieure à 18,{} sinon {}
-
-} else {
-    
-}
-
-if(age >= 18){ //supérieur ou égal à 18
-    alert('vous êtes majeur')
-} else {
-  alert('vous êtes mineur')
-}
+img.addEventListener ('click', function(){
+  var img = document.getElementById('img');
+  var width = img.clientWidth;
+  var height = img.clientHeight;
+  img.style.width = (width + 500) + "px";
+  img.style.height = (width + 500) + "px";
+})

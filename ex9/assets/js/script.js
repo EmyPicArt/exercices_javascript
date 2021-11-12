@@ -4,6 +4,6 @@ img.addEventListener ('click', function(){
   var img = document.getElementById('img');
   var width = img.clientWidth;
   var height = img.clientHeight;
-  img.style.width = (width + 500) + "px";
-  img.style.height = (width + 500) + "px";
+  img.style.width = (width +500) + "px";
+  img.style.height = (height + 500) + "px";
 })

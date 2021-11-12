@@ -5,12 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Javascript</title>
 </head>
 <body>
-    <p id="firstParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, velit!</p>
-    <p id="secondParagraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, aspernatur.</p>
-    <p id="thirdParagraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, aperiam.</p>
+    <div class="mb-3">
+        <label for="userName" class="form-label">Nom d'utilisateur : </label>
+        <input type="password" class="form-control" id="userName" placeholder="entrez votre pseudo">
+  </div>
     <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <div id="empty"></div>
 </body>
 </html>
+<!-- 
+// Etapes exo 10
+
+// Dans le HTML, créer un input et une div avec un id sur chaque élément
+
+// Déclarer une variable dans laquelle vous stockez un pseudo en chaîne de caractère
+
+// Cibler l'input avec son id et lui rattacher un événement qui se déclenche avec le clavier
+
+// Créer une fonction qui sera déclenchée par cet événement et dans cette fonction faire une condition -> SI la valeur de l'input n'est pas égale à la variable créée au départ, les bordures de l'input deviennent rouge et on injecte avec innerHTML une div qui aura pour class "alert alert-danger" SINON les bordures deviennent vertes et on affiche la div "alert alert-success"
+
+//La div que l'on injecte avec innerHTML est injectée dans la div vide créée en HTML au départ, en ciblant son ID et le changement de couleur des bordures se fait avec la fonction " style " EN JAVASCRIPT, pas dans le CSS ! -->

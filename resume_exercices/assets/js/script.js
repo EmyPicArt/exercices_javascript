@@ -55,7 +55,7 @@
 //   alert('Voici le résultat de ce magnifique calcul x2 : ' + (feet*2) + '\nsi j y ajoute 5 : ' + (feet*2 + 5) + '\nsi je multiplie par 50 ce pied de Géant : ' + (feet*2 + 5)*50) + '\nj enleve l annee de naissance : ' + (feet*2+5)*50 - year;
 // });
 
-ex 7
+// ex 7
 // Ma méthode :
 // var button = document.getElementById('button');
 
@@ -77,14 +77,14 @@ ex 7
 // btn.addEventListener('click', function(){
 //     var age = document.getElementById('age').value;
     
-// //     //1ère méthode
-// //     // if(age >= 18 && age <= 120){ (= si age supérieur ou égal à 18 ET age inférieur ou égal à 120)
-// //     //     alert('Vous êtes majeur !');
-// //     // } else if(age > 0 && age < 18) { (=SINON et on ajoute une condition : age compris entre 0 et 18)
-// //     //     alert('Vous êtes mineur !')
-// //     // } else {(=SINON message d'erreur car entrée incorrecte)
-// //     //     alert('Arrête tes conneries !');
-// //     // }
+//     1ère méthode
+//     if(age >= 18 && age <= 120){ (= si age supérieur ou égal à 18 ET age inférieur ou égal à 120)
+//         alert('Vous êtes majeur !');
+//     } else if(age > 0 && age < 18) { (=SINON et on ajoute une condition : age compris entre 0 et 18)
+//         alert('Vous êtes mineur !')
+//     } else {(=SINON message d'erreur car entrée incorrecte)
+//         alert('Arrête tes conneries !');
+//     }
 
 
 
@@ -109,22 +109,34 @@ ex 7
 // img1.addEventListener('mouseout', function(){
 //   var img1 = document.getElementById('img1').src="assets/img/stitch.jpg";
 // });
+// mouseover : fonctionne comme mouseenter mais touche les éléments enfants aussi (ex: les elmts enfants d'une div, l'evt est décanché peut importe où on survole la div)
 
-// ex 9
 
-// agrandir une image au clic 1) créer une var width/height = _.clientWidth/Height = 2) _.style.width/height = (width + nb + "px")
+// // ex 9
 
+// Créer en 1er une var ciblant l'image elle même 
+// Créer une var ciblant la taille initiale fixe sans modif au click
+// var img = document.getElementById('img');
+// var initialImg = img.clientWidth;
+
+// // créer une fonction ciblant l'img au click
 // img.addEventListener ('click', function(){
-//   var img = document.getElementById('img');
-//   var width = img.clientWidth;
-//   var height = img.clientHeight;
-//   img.style.width = (width +500) + "px";
-//   img.style.height = (height + 500) + "px";
+//   // créer une nouvelle var pour récupérer une nouvelle fois la taille mais qui se modifira au click
+//   var widthImg = img.clientWidth;
+// // Condition si la taille modifiée est sup à 500 px alors on revient à la taille initiale par un style css : var taille initiale + "px"
+// // sinon dans les autres conditions on agrandit l'img de 50 px à chaque click par du CSS : var taille modifiable + 50 px
+//   if(widthImg > 500){
+//     img.style.width = initialImg +"px";
+//   } else {
+//     img.style.width = (widthImg +50) + "px";
+//   }
 // })
 
+// // autre méthode utiliser :
+// // id.style.transform ="scale(1.5)";
 
 
-// ex 10
+// // ex 10
 // // créer une var pour cibler l'input ( afin de déclencher une fonction par rapport à cet élément par la suite)
 // var password = document.getElementById('password');
 
@@ -137,7 +149,7 @@ ex 7
 //   var truePassword = '0000';
 //   var sucess = document.getElementById('success');
 //   var danger = document.getElementById('danger');
-//   // condition si input  strictement égal (==) au string alors Div à green masquer/afficher red
+//   // condition si input  strictement égal (===) au string alors Div à green masquer/afficher red
 //   if (valuePassword == truePassword){  
 //     sucess.style.display = "block";
 //     danger.style.display = "none";
@@ -149,8 +161,23 @@ ex 7
 //     password.style.border = "3px outset red";
 //   }
 // });
-// voir le innerHTML 
-// password.style.border = "3px outset red";
-// password.style.border = "3px outset green";
 
-// pour afficher un console log(cibler la var), le placer après la récupération de la var value
+
+// // pour afficher un console log(cibler la var), le placer après la récupération de la var value
+
+
+
+// // Méthode 2
+// var truePassword = "0000";
+// var empty = document.getElementById("empty");
+
+// password .addEventListener ("keyup", function(){
+//   var valuePassword = document.getElementById("password").value;
+//   if(valuePassword === truePassword){
+//     password.style.border = "3px outset green";
+//     empty.innerHTML = '<div id="success" class="alert alert-success"><p>Good !</p></div>';
+//   }else{
+//     password.style.border ="3px outset red";
+//     empty.innerHTML = '<div id="danger" class="alert alert-danger"><p>No good !><p></div>';
+//   }
+// })

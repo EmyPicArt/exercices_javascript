@@ -1,18 +1,29 @@
-console.log(password)
+// créer une var pour cibler l'input ( afin de déclencher une fonction par rapport à cet élément par la suite)
+var password = document.getElementById('password');
 
-var userName = addEventListener ("keyup", function(){
-  var password = document.getElementById('password').value;
+// créer un événement déclanché en fonction de l'input : "keyup" pour frappe sur le clavier
+// récuper à l'intérieur de la fonction la value de l'input
+// créer une variable avec un string de l'input correct
+// récuperer les div à afficher / masquer
+password.addEventListener ("keyup", function(){
+  var valuePassword = document.getElementById('password').value;
   var truePassword = '0000';
-  var sucess = document.getElementById('sucess');
+  var sucess = document.getElementById('success');
   var danger = document.getElementById('danger');
-  if ('password' == 'truePassword'){  
+  // condition si input  strictement égal (==) au string alors Div à green masquer/afficher red
+  if (valuePassword == truePassword){  
     sucess.style.display = "block";
     danger.style.display = "none";
+    password.style.border = "3px outset green";
+    // sinon tous les autres cas masquer green/ afficher red 
   } else {
     sucess.style.display = "none";
     danger.style.display = "block";
+    password.style.border = "3px outset red";
   }
 });
-// voir le bg color et le innerhtml empty.innerHTML 
-// password.style.backgroundColor = red;
-// password.style.backgroundColor = green;
+// voir le innerHTML 
+// password.style.border = "3px outset red";
+// password.style.border = "3px outset green";
+
+// pour afficher un console log(cibler la var), le placer après la récupération de la var value

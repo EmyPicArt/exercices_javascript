@@ -1,0 +1,25 @@
+*,::before, ::after{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    border:none;
+}
+/* ex 8
+#img1{
+    height: 500px;
+    width: 500px;
+} */
+
+
+
+/* ex 9
+#img{
+    height: 200px;
+    font-weight: 200px;
+} */
+
+
+/* ex 10
+#sucess, #danger{
+    display: none;
+} */

@@ -10,7 +10,7 @@
 //   var truePassword = '0000';
 //   var sucess = document.getElementById('success');
 //   var danger = document.getElementById('danger');
-//   // condition si input  strictement égal (==) au string alors Div à green masquer/afficher red
+//   // condition si input  strictement égal (===) au string alors Div à green masquer/afficher red
 //   if (valuePassword == truePassword){  
 //     sucess.style.display = "block";
 //     danger.style.display = "none";
@@ -39,11 +39,11 @@ var empty = document.getElementById("empty");
 
 password .addEventListener ("keyup", function(){
   var valuePassword = document.getElementById("password").value;
-  if(valuePassword == truePassword){
+  if(valuePassword === truePassword){
     password.style.border = "3px outset green";
-    empty.innerHTML = '<div id="success" class="alert alert-success">Good !</div>';
+    empty.innerHTML = '<div id="success" class="alert alert-success"><p>Good !</p></div>';
   }else{
     password.style.border ="3px outset red";
-    empty.innerHTML = '<div id="danger" class="alert alert-danger">No good !</div>';
+    empty.innerHTML = '<div id="danger" class="alert alert-danger"><p>No good !><p></div>';
   }
 })
